@@ -2,13 +2,17 @@ macro_tmux_hor: macro_tmux_hor{
 compatible = "zmk,behavior-macro";
 label = "macro_tmux_hor";
 #binding-cells = <0>;
-bindings = <&kp LEFT_CONTROL>, <&kp F>, <&kp PERCENT>;
+wait-ms = <40>;
+tap-ms = <40>;
+bindings = <&kp LEFT_CONTROL &kp F>, <&kp PERCENT>;
 };
 macro_tmux_vert: macro_tmux_vert{
 compatible = "zmk,behavior-macro";
 label = "macro_tmux_vert";
 #binding-cells = <0>;
-bindings = <&kp LEFT_CONTROL>, <&kp F>, <&kp DOUBLE_QUOTES>;
+wait-ms = <40>;
+tap-ms = <40>;
+bindings = <&kp LEFT_CONTROL &kp F>, <&kp DOUBLE_QUOTES>;
 };
 macro_tmux: macro_tmux{
 compatible = "zmk,behavior-macro";
