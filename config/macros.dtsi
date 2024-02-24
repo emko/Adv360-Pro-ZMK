@@ -4,7 +4,7 @@ label = "macro_tmux_hor";
 #binding-cells = <0>;
 wait-ms = <40>;
 tap-ms = <40>;
-bindings = <&kp LEFT_CONTROL &kp F>, <&kp PERCENT>;
+bindings = <&macro_press &kp LEFT_CONTROL &kp F>,<&macro_pause_for_release>,<&macro_release &kp LEFT_CONTROL &kp F>,<&macro_press &kp DOUBLE_QUOTES>,<&macro_release &kp DOUBLE_QUOTES>;
 };
 macro_tmux_vert: macro_tmux_vert{
 compatible = "zmk,behavior-macro";
@@ -12,13 +12,15 @@ label = "macro_tmux_vert";
 #binding-cells = <0>;
 wait-ms = <40>;
 tap-ms = <40>;
-bindings = <&kp LEFT_CONTROL &kp F>, <&kp DOUBLE_QUOTES>;
+bindings = <&macro_press &kp LEFT_CONTROL &kp F>,<&macro_pause_for_release>,<&macro_release &kp LEFT_CONTROL &kp F>,<&macro_press &kp PERCENT>,<&macro_release &kp PERCENT>;
 };
 macro_tmux: macro_tmux{
 compatible = "zmk,behavior-macro";
 label = "macro_tmux";
 #binding-cells = <0>;
-bindings = <&kp F>;
+wait-ms = <40>;
+tap-ms = <40>;
+bindings = <&macro_press &kp LEFT_CONTROL &kp F>,<&macro_release &kp LEFT_CONTROL &kp F>;
 };
 macro_quotes: macro_quotes{
 compatible = "zmk,behavior-macro";
